@@ -33,7 +33,7 @@ wb = openpyxl.load_workbook('iris_data.xlsx')
 print(wb.get_sheet_names())
 sh = wb.get_active_sheet()
 print(sh)
-with open('test.csv', 'w') as f:
+with open('iris_dataConvertedToCSV.csv', 'w') as f:
     c = csv.writer(f)
     for r in sh.rows:
         c.writerow([cell.value for cell in r])
